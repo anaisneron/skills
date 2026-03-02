@@ -67,7 +67,7 @@ This is where most projects fail. For each input, you need to answer:
 
 **Simplification Rules for Intrants:**
 The goal is to minimize what the client needs to DO manually. For every manual input, ask:
-1. Can this be pulled automatically from an existing system? (e.g., Pipedrive field instead of manual entry)
+1. Can this be pulled automatically from an existing system? (e.g., CRM field instead of manual entry)
 2. Can this be derived/calculated from other data? (e.g., "days overdue" = today - invoice_date)
 3. Can this be set once and reused? (e.g., competitor URLs configured once per client)
 4. Can this use a default with override? (e.g., send to assigned person, unless manually changed)
@@ -79,9 +79,9 @@ The goal is to minimize what the client needs to DO manually. For every manual i
 - Is it a draft (human reviews before sending) or automatic?
 
 **Filtres & Logique:**
-- What conditions must be met? (e.g., "only mensuel récurrent clients")
+- What conditions must be met? (e.g., "only recurring clients")
 - What gets excluded? (e.g., "exclude upsell deals")
-- Exact thresholds (e.g., "2+ unpaid invoices AND 12+ days overdue")
+- Exact thresholds (e.g., "3+ unpaid invoices")
 
 **Exceptions & Edge Cases:**
 - What did the client mention as "special cases"?
@@ -95,7 +95,7 @@ The goal is to minimize what the client needs to DO manually. For every manual i
 
 **Actions Client Requises:**
 - What does the client need to provide or configure BEFORE this can work?
-- Be ultra-specific: "Fill in the 'competitor_urls' field in Pipedrive for each active client" not "provide competitor information"
+- Be ultra-specific: "Fill in the 'competitor_urls' field in CRM for each active client" not "provide competitor information"
 
 ### Phase 3 — Build the Cartographie Globale
 
@@ -105,7 +105,7 @@ Create a document (DOCX preferred for sharing with the team) with:
 2. **Vue d'ensemble**: A summary table of ALL workflows with columns:
    - Code | Nom | Déclencheur | Systèmes | Statut | Dépendances
 3. **Flux de données**: Show which systems feed into which workflows, and what comes out. Use a clear visual representation (table or diagram description).
-4. **Intrants Client Consolidés**: A SINGLE deduplicated list of everything the client needs to provide across ALL workflows. Group by system (e.g., "Dans Pipedrive:", "Dans QuickBooks:", "À nous envoyer:"). This is the client's checklist.
+4. **Intrants Client Consolidés**: A SINGLE deduplicated list of everything the client needs to provide across ALL workflows. Group by system (e.g., "Dans HCRM:", "Dans QuickBooks:", "À nous envoyer:"). This is the client's checklist.
 5. **Calendrier**: Timeline of which workflows are being built when.
 
 ### Phase 4 — Build Each Fiche Technique
@@ -127,7 +127,7 @@ PHASE: [Phase X — Mois]
 ─── DÉCLENCHEUR ───
 Type: [Schedule | Webhook | CRM Event | Manuel]
 Détail: [Fréquence exacte ou événement exact]
-Système source: [Pipedrive | QuickBooks | N8N cron | etc.]
+Système source: [CRM | QuickBooks | N8N cron | etc.]
 
 ─── INTRANTS (ENTRÉES) ───
 
@@ -135,7 +135,7 @@ Système source: [Pipedrive | QuickBooks | N8N cron | etc.]
   ┌─────────────────┬──────────────┬─────────────────┐
   │ Donnée          │ Source       │ Champ / API      │
   ├─────────────────┼──────────────┼─────────────────┤
-  │ Nom client      │ Pipedrive    │ deal.org_name    │
+  │ Nom client      │ CRM          │ deal.org_name    │
   │ ...             │ ...          │ ...              │
   └─────────────────┴──────────────┴─────────────────┘
 
@@ -143,7 +143,7 @@ Système source: [Pipedrive | QuickBooks | N8N cron | etc.]
   ┌─────────────────┬──────────────────────────────────┐
   │ Donnée          │ Action requise                    │
   ├─────────────────┼──────────────────────────────────┤
-  │ URLs compétit.  │ Remplir champ X dans Pipedrive   │
+  │ URLs compétit.  │ Remplir champ X dans CRM   │
   │ ...             │ ...                               │
   └─────────────────┴──────────────────────────────────┘
 
