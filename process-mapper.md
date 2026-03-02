@@ -49,7 +49,7 @@ Read everything thoroughly. The most important details are often buried in casua
 For each workflow you identify, extract these elements from the source material:
 
 **Identity:**
-- Workflow code/name (e.g., QW1, QW2, Migration-1)
+- Workflow code/name
 - One-line description
 - Current status (live, in development, planned)
 
