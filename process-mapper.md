@@ -105,7 +105,7 @@ Create a document (DOCX preferred for sharing with the team) with:
 2. **Vue d'ensemble**: A summary table of ALL workflows with columns:
    - Code | Nom | Déclencheur | Systèmes | Statut | Dépendances
 3. **Flux de données**: Show which systems feed into which workflows, and what comes out. Use a clear visual representation (table or diagram description).
-4. **Intrants Client Consolidés**: A SINGLE deduplicated list of everything the client needs to provide across ALL workflows. Group by system (e.g., "Dans HCRM:", "Dans QuickBooks:", "À nous envoyer:"). This is the client's checklist.
+4. **Intrants Client Consolidés**: A SINGLE deduplicated list of everything the client needs to provide across ALL workflows. Group by system (e.g., "Dans CRM:", "Dans Accounting System:", "À nous envoyer:"). This is the client's checklist.
 5. **Calendrier**: Timeline of which workflows are being built when.
 
 ### Phase 4 — Build Each Fiche Technique
@@ -127,7 +127,7 @@ PHASE: [Phase X — Mois]
 ─── DÉCLENCHEUR ───
 Type: [Schedule | Webhook | CRM Event | Manuel]
 Détail: [Fréquence exacte ou événement exact]
-Système source: [CRM | QuickBooks | N8N cron | etc.]
+Système source: [CRM | Accounting System | N8N cron | etc.]
 
 ─── INTRANTS (ENTRÉES) ───
 
