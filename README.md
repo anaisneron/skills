@@ -1,6 +1,6 @@
 # 🧠 Skills Claude — par Anaïs Néron
 
-> Des skills open source pour [Claude](https://claude.ai) qui automatisent le vrai travail. Pas des démos — des outils testés en production avec de vrais clients.
+> Des skills open source pour [Claude](https://claude.ai) qui automatisent le vrai travail.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-1C2B4A.svg?style=flat-square)](LICENSE)
 [![Agence 3A](https://img.shields.io/badge/par-Agence%203A-C8102E?style=flat-square)](https://agence3a.ca)
